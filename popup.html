@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 350px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    .input-group {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+    #sessionName {
+      flex-grow: 1;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .session-list {
+      max-height: 400px;
+      overflow-y: auto;
+      border: 1px solid #eee;
+      border-radius: 4px;
+      padding: 8px;
+    }
+    .session-item {
+      padding: 12px;
+      margin: 8px 0;
+      background: #f5f5f5;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.2s;
+    }
+    .session-item:hover {
+      background: #eee;
+    }
+    .session-info {
+      flex-grow: 1;
+    }
+    .session-actions {
+      display: flex;
+      gap: 4px;
+    }
+    button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    #saveSession {
+      background: #4CAF50;
+      color: white;
+    }
+    #saveSession:hover {
+      background: #45a049;
+    }
+    .restore-btn {
+      background: #2196F3;
+      color: white;
+    }
+    .restore-btn:hover {
+      background: #1e88e5;
+    }
+    .delete-btn {
+      background: #f44336;
+      color: white;
+    }
+    .delete-btn:hover {
+      background: #e53935;
+    }
+    .empty-state {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="input-group">
+    <input type="text" id="sessionName" placeholder="Enter session name">
+    <button id="saveSession">Save Session</button>
+  </div>
+  <div class="session-list" id="sessionList"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
